@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Best Cars Dealership</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+
+    <style>
+        .contact-container {
+            width: 85%;
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 35px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        .contact-heading {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #212529;
+        }
+
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: space-around;
+        }
+
+        .contact-card {
+            flex: 1 1 220px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+        }
+
+        .contact-card h3 {
+            color: #008b8b;
+            margin-bottom: 15px;
+        }
+
+        .contact-card p {
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 600px) {
+            .contact-container {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light"
+         style="background-color: darkturquoise; min-height: 1in;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" style="font-size: 28px;">
+                <strong>Dealerships</strong>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarText"
+                    aria-controls="navbarText"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size: larger;"
+                           href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size: larger;"
+                           href="/about/">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                           style="font-size: larger;"
+                           href="/contact/">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="contact-container">
+        <h1 class="contact-heading">Contact Us</h1>
+
+        <p class="contact-intro">
+            Have a question about a vehicle or dealership?
+            Our team at Best Cars is here to help you.
+        </p>
+
+        <div class="contact-details">
+            <section class="contact-card">
+                <h3>Customer Support</h3>
+                <p>For vehicle inquiries and general assistance.</p>
+                <p><strong>Email:</strong> support@bestcars.com</p>
+                <p><strong>Phone:</strong> 312-611-1111</p>
+            </section>
+
+            <section class="contact-card">
+                <h3>Sales Team</h3>
+                <p>Need help finding the right car? Contact our sales team.</p>
+                <p><strong>Email:</strong> sales@bestcars.com</p>
+                <p><strong>Hours:</strong> Monday–Friday, 9 AM–5 PM</p>
+            </section>
+
+            <section class="contact-card">
+                <h3>Visit Us</h3>
+                <p>Visit your local Best Cars dealership for assistance.</p>
+                <p><strong>Service:</strong> Vehicle maintenance and support</p>
+                <p><strong>Website:</strong> Best Cars Dealerships</p>
+            </section>
+        </div>
+    </main>
+
+    <script src="/static/bootstrap.bundle.min.js"></script>
+</body>
+</html>
