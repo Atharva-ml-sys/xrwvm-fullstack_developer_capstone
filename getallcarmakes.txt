@@ -1,0 +1,5 @@
+Command:
+curl -X GET "https://atharvabhoj2-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/djangoapp/get_cars"
+
+Output:
+{"CarModels": [{"CarModel": "Camry", "CarMake": "Toyota"}]}
