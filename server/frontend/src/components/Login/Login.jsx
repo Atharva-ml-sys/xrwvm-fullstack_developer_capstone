@@ -15,6 +15,7 @@ const Login = ({ onClose }) => {
     e.preventDefault();
 
     const res = await fetch(login_url, {
+        credentials: "same-origin",
         method: "POST",
         headers: {
             "Content-Type": "application/json",
