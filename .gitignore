@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Node.js dependencies
+node_modules/
+
+# Frontend build output
+server/frontend/build/
