@@ -1,13 +1,10 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
+from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import logout, login, authenticate
-from django.contrib import messages
-from datetime import datetime
 import logging
 import json
 from django.views.decorators.csrf import csrf_exempt
-from .models import CarMake, CarModel
+from .models import CarModel
 from .restapis import get_request, post_review
 
 logger = logging.getLogger(__name__)
@@ -48,7 +45,9 @@ def register_user(request):
         email = data.get("email", "").strip()
 
         if not all([username, password, first_name, last_name, email]):
-            return JsonResponse({"error": "All fields are required"}, status=400)
+            return JsonResponse(
+                {"error": "All fields are required"}, status=400
+            )
 
         if User.objects.filter(username=username).exists():
             return JsonResponse({"error": "Already Registered"}, status=409)
@@ -84,6 +83,7 @@ def get_cars(request):
 
     return JsonResponse({"CarModels": cars})
 
+
 def get_dealerships(request, state="All"):
     if state == "All":
         endpoint = "/fetchDealers"
@@ -116,12 +116,15 @@ def add_review(request):
             data = json.loads(request.body)
             response = post_review(data)
             if response is not None:
-                return JsonResponse({"status": 200, "message": "Review posted successfully"})
+                return JsonResponse({
+                    "status": 200,
+                    "message": "Review posted successfully"
+                })
             return JsonResponse(
                 {"status": 401, "message": "Error in posting review"},
                 status=401
             )
-        except Exception as e:
+        except Exception:
             return JsonResponse(
                 {"status": 401, "message": "Error in posting review"},
                 status=401
