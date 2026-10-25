@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: database-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: database-api
+  template:
+    metadata:
+      labels:
+        app: database-api
+    spec:
+      containers:
+      - name: database-api
+        image: us.icr.io/sn-labs-atharvabhoj2/dealership-api:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3030

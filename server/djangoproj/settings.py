@@ -17,18 +17,11 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    (
-        'atharvabhoj2-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.'
-        'proxy.cognitiveclass.ai',
-    ),
+    'atharvabhoj2-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    (
-        'https://atharvabhoj2-8000.theiadockernext-0-labs-'
-        'prod-theiak8s-4-tor01.'
-        'proxy.cognitiveclass.ai',
-    ),
+    'https://atharvabhoj2-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai',
 ]
 
 REST_FRAMEWORK = {
